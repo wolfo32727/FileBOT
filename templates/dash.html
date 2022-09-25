@@ -1,0 +1,61 @@
+<html>
+<body>
+
+<style>
+body
+{
+    background-color: #303030;
+}
+#container
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logo
+{
+    color: azure;
+    font-family: monospace;
+    font-size: 25px;
+    text-align: center;
+
+}
+.server
+{
+    font-size: 30px;
+    margin-top: 130px;
+    margin-left: 200px;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 0 6px black;
+    border-style: none;
+    background-color: 303030;
+    font-family: monospace;
+    transform: translate(-100, -10, -50);
+    transition: 0.8s;
+        
+}
+.server:hover
+{
+    box-shadow: 0 0 0 10px black;
+}
+
+
+</style>
+<div id="container">
+
+<div id="logo">
+
+<h1>Witaj {{user['username']}}#{{user['discriminator']}}</h1> 
+<img src="https://cdn.discordapp.com/avatars/{{user['id']}}/{{user['avatar']}}.png" alt="avatr_user" width="100" height="100">
+<div id="servers">
+    {%  for server in servers %}
+    <a href="/panel/{{server['id']}}"><button class="server">{{server['name']}}</button></a>
+    {% endfor %}
+
+</div>
+
+</div>
+</body>
+</html>
+

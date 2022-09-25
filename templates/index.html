@@ -1,0 +1,99 @@
+<html>
+
+<body>
+
+
+<style>
+body
+{
+    background-color: #303030;
+}
+#container
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logo
+{
+    color: azure;
+    font-family: monospace;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 60px;
+    
+}
+.login
+    {
+        font-size: 25px;
+        margin-top: 250px;
+        margin-left: 375px;
+        padding: 10px;
+        border-radius: 50px;
+        box-shadow: 0 0 0 6px black;
+        border-style: none;
+        background-color: 303030;
+        font-family: monospace;
+        transition: 0.8s;
+        
+    }
+    .login:hover
+    {
+        box-shadow: 0 0 0 10px black;
+    }
+    .dash
+    {
+        font-size: 25px;
+        margin-top: 250px;
+        margin-left: 200px;
+        padding: 10px;
+        border-radius: 50px;
+        box-shadow: 0 0 0 6px black;
+        border-style: none;
+        background-color: 303030;
+        font-family: monospace;
+        transition: 0.8s;
+        
+    }
+    .dash:hover
+    {
+        box-shadow: 0 0 0 10px black;
+    }
+    .logout
+    {
+        font-size: 25px;
+        margin-top: 100px;
+        margin-left: 190px;
+        padding: 10px;
+        border-radius: 50px;
+        box-shadow: 0 0 0 6px black;
+        border-style: none;
+        background-color: 303030;
+        font-family: monospace;
+        transition: 0.8s;
+        
+    }
+    .logout:hover
+    {
+        box-shadow: 0 0 0 10px black;
+    }
+
+
+</style>        
+<div id="container">
+<div id="logo">
+
+    <h1>Witaj na stronie FileBota</h1>
+    
+</div>
+<div id="menu">
+    {% if "token" in session%}
+    <a href="/wyloguj"><button class="logout">Wyloguj się</button></a>     
+    <a href="/dashboard"><button class="dash">Dashboard</button></a>
+    {% else %}
+    <a href="{{link}}"><button class="login">Zaloguj się</button></a>
+    {% endif %}
+</div>
+</div>
+</body>
+</html>
