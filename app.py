@@ -13,7 +13,7 @@ app.config["SECRET_KEY"] = "xyz"
 step.configdb["CLIENT_ID"] = "1021830174905475102"
 step.configdb["CLIENT_SECRET"] = "GjZt3yawmH-DOcWcufQDh70Y_WU8vikN"
 step.configdb["REDIRECT_URI"] = "http://127.0.0.1:5000/zaloguj"
-step.configdb["BOT_TOKEN"] = "MTAyMTgzMDE3NDkwNTQ3NTEwMg.GS6865.4Exf9rrww1IzJSkd-oPzlWI7m_kxGO9QSJWsik"
+step.configdb["BOT_TOKEN"] = "BOT_TOKEN"
 
 @app.route("/")
 def strona():
